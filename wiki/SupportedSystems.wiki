@@ -1,0 +1,10 @@
+#summary List supported systems
+#labels Featured
+
+= LoginShare works with =
+
+ * Drupal
+ * Interspire Shopping Cart
+ * Magento
+ * WHMCS
+ * Wordpress
