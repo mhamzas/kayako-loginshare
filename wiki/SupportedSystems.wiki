@@ -1,7 +1,7 @@
 #summary List supported systems
 #labels Featured
 
-= LoginShare works with =
+= loginShare works with =
 
  * Drupal
  * Interspire Shopping Cart
