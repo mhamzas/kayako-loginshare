@@ -1,0 +1,35 @@
+#summary Installation guide.
+#labels Featured
+
+= Introduction =
+
+This documentation describes the process for installing Kayako Module LoginShare on a server for the first time.
+
+= Details =
+
+Module is provided as compressed tar file, which have a `.tar.gz` extension.
+
+You must decide where you want installed on your web server. You can use for example `[kayako directory]/loginshare`
+
+The `config.php` file must be manually edited for configuration of the Loginshare´s module database connection and module.
+
+|| Variable || Description ||
+|| `$system` || Select active module which will be used. ||
+|| `$dbhost`  || This variable stores the address of your database server. On most installations the database server is located on the same computer as the web server, in this case the address should be set to "localhost," otherwise use the address of the database server as supplied by your web host. ||
+|| `$dbname`  || The name of the database that will contain your installation on the database server. ||
+|| `$dbuser` || This variable contains the username provided to you by your host for connecting to your database server. ||
+|| `$dbpass` || The password that accompanies the database username should be entered here. ||
+
+= Configuring settings =
+
+The login share settings page is categorized into two parts
+
+*Staff LoginShare Settings
+*User LoginShare Settings
+
+
+|| Enable User/Staff LoginShare || If enabled, all authentication requests for the support center users/clients/staff will first be tried against the URL below based on our module.||
+|| User LoginShare Title	|| Enter *LoginShare* ||
+|| User LoginShare URL	|| Enter URL auth.php script, for example `http://support.domain.tld/loginshare/auth.php`||
+
+Update to save the changes made to the LoginShare settings.
