@@ -1,0 +1,20 @@
+# FAQ #
+
+## curl\_setopt() Error ##
+`[Warning]: curl_setopt() [function.curl-setopt]: CURLOPT_FOLLOWLOCATION cannot be activated when safe_mode is enabled or an open_basedir is set (LoginShare/class.SWIFT_LoginShare.php:95)`
+
+**Resolution**
+
+You must edit file `__swift\library\LoginShare\class.SWIFT_LoginShare.php` about line 95
+change this
+
+```
+curl_setopt($_curlHandle, CURLOPT_FOLLOWLOCATION, 1);
+```
+
+to
+
+```
+if (ini_get('open_basedir') == '' && ini_get('safe_mode' == 'Off'))
+curl_setopt($_curlHandle, CURLOPT_FOLLOWLOCATION, 1);
+```
